@@ -25,6 +25,13 @@
         echo "Nome:".$pessoa["nome"]."<br>";
         echo "Document:".$pessoa["document"]."<br>";
         echo "Type:".$pessoa["type"]."<br>";
+        echo '<a href="./?deletar='.$pessoa["id"].'"> DELETAR </a>';
         echo "<hr>";
     };
+
+    if(isset($_GET['deletar'])){
+        $id = (int) $_GET['deletar'];
+        $pdo -> exec("DELETE FROM PESSOAS WHERE ID =$id");
+        echo "Cliente $id deletado";
+    }
 ?>
