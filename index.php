@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php 
+    <?php      
         require_once('./pages/home.php');
     ?>
 </body>
